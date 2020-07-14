@@ -14,6 +14,15 @@ export default class Home extends React.Component {
           }
         />
 
+    <Button 
+          title="Go To Feed"
+          onPress={
+            () => this.props.navigation.navigate( 'Feed', {
+              username: 'Bill'
+            } )
+          }
+        />
+
       </View>
     );
   }
