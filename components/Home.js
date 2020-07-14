@@ -1,32 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default class Home extends React.Component {
-  render() {
+export default function Home ({ navigation }) {
     return (
-      <View style={styles.container}>
+        <View style={styles.container}>
         <Text>Hello from home!</Text>
 
         <Button 
-          title="Go To Profile"
-          onPress={
-            () => this.props.navigation.navigate( 'Profile' )
-          }
+            title="Go To Profile"
+            onPress={
+            () => navigation.navigate( 'Profile' )
+            }
         />
 
-    <Button 
-          title="Go To Feed"
-          onPress={
-            () => this.props.navigation.navigate( 'Feed', {
-              username: 'Bill'
+        <Button 
+            title="Go To Feed"
+            onPress={
+            () => navigation.navigate( 'Feed', {
+                username: 'Mark Zuckerberg'
             } )
-          }
+            }
         />
 
-      </View>
+        </View>
     );
-  }
 }
+
 
 const styles = StyleSheet.create({
   container: {

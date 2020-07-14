@@ -1,14 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class Profile extends React.Component {
-  render() {
+export default function Profile() {
     return (
       <View style={styles.container}>
         <Text>Hello from profile!</Text>
       </View>
     );
-  }
 }
 
 const styles = StyleSheet.create({
